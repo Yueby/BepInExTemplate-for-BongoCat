@@ -1,12 +1,9 @@
 <Project>
   <PropertyGroup>
     <!-- Set if the default steam game install directory doesn't work. -->
-    <!-- <_GameNameNoSpaces_GameRootDir></_GameNameNoSpaces_GameRootDir> -->
+    <!-- <BongoCatGameRootDir></BongoCatGameRootDir> -->
 
-    <!-- Set if your BepInEx/ directory isn't in the game files. -->
-    <!-- <_GameNameNoSpaces_BepInExDir></_GameNameNoSpaces_BepInExDir> -->
-
-    <!-- Enable/disable deploying mod files to BepInEx directory. -->
-    <DeployModFilesEnabled>true</DeployModFilesEnabled>
+    <!-- Set if your BepInEx/plugins/ directory isn't in the game files. -->
+    <!-- <BongoCatPluginsDir></BongoCatPluginsDir> -->
   </PropertyGroup>
 </Project>

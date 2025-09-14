@@ -1,12 +1,12 @@
 {
     "$schema": "http://json.schemastore.org/template",
-    "author": "_TemplateAuthorNoSpaces_",
+    "author": "BongoCatModding",
     "classifications": [
         "BepInEx", "Plugin", "Mod"
     ],
-    "identity": "com.github._TemplateAuthorNoSpaces_.BepInExTemplate",
-    "name": "_GameName_ BepInEx Plugin",
-    "shortName": "_GameNameShortNoSpacesLowercase_mod",
+    "identity": "com.github.BongoCatModding.BepInExTemplate",
+    "name": "BongoCat BepInEx Plugin",
+    "shortName": "bcmod",
     "tags": {
         "language": "C#",
         "type": "project"
