@@ -72,14 +72,14 @@
   <!-- Copy mod files defined in projects to the target BepInEx directory -->
   <Target Name="DeployFiles" AfterTargets="Build" Condition="'$(DeployModFilesEnabled)' == 'true'">
     <PropertyGroup>
-      <_TargetDir>$([MSBuild]::NormalizeDirectory($(_GameNameNoSpaces_BepInExDir)))</_TargetDir>
+      <_TargetDir>$([MSBuild]::NormalizeDirectory($(MiniCozyRoomLoFiPluginsDir)))</_TargetDir>
     </PropertyGroup>
     <Message
       Text="Deploy → @(DeployModFiles -> '%(BepInExDir)%(FileName)%(Extension)')"
       Importance="High"
     />
     <Error
-      Text="BepInEx directory '$(_TargetDir)' doesn't exist! Configure _GameNameNoSpaces_BepInExDir to point to a valid path in the Config.Build.user.props file."
+      Text="BepInEx plugins directory '$(_TargetDir)' doesn't exist. Configure MiniCozyRoomLoFiPluginsDir in Config.Build.user.props to point to your real Mini Cozy Room: Lo-Fi BepInEx/plugins path, or set DeployModFilesEnabled to false until it is configured."
       Condition="!Exists('$(_TargetDir)')"
     />
     <Copy SourceFiles="@(DeployModFiles)" DestinationFolder="$(_TargetDir)%(BepInExDir)" />

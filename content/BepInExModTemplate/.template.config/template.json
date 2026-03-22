@@ -1,12 +1,12 @@
 {
     "$schema": "http://json.schemastore.org/template",
-    "author": "_TemplateAuthorNoSpaces_",
+    "author": "MiniCozyRoomLoFiModding",
     "classifications": [
         "BepInEx", "Plugin", "Mod"
     ],
-    "identity": "com.github._TemplateAuthorNoSpaces_.BepInExTemplate",
-    "name": "_GameName_ BepInEx Plugin",
-    "shortName": "_GameNameShortNoSpacesLowercase_mod",
+    "identity": "com.github.MiniCozyRoomLoFiModding.BepInExTemplate",
+    "name": "Mini Cozy Room: Lo-Fi BepInEx Plugin",
+    "shortName": "mcrlfmod",
     "tags": {
         "language": "C#",
         "type": "project"

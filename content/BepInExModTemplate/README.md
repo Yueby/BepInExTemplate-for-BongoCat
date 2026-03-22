@@ -10,9 +10,14 @@ Next steps:
 
 - Create a copy of the `Config.Build.user.props.template` file and name it `Config.Build.user.props`
   - This will automate copying your plugin assembly to `BepInEx/plugins/`
-  - Configure the paths to point to your game path and your `BepInEx/plugins/`
-  - Game assembly references should work if the path to the game is valid
+  - Configure `MiniCozyRoomLoFiGameRootDir`, `MiniCozyRoomLoFiPluginsDir`, and `MiniCozyRoomLoFiManagedDir` to match your real Mini Cozy Room: Lo-Fi installation
+  - `MiniCozyRoomLoFiManagedDir` is currently required for local game assembly references and is not derived automatically from `MiniCozyRoomLoFiGameRootDir`
+  - Game assembly references will work once the managed assemblies path is configured correctly
 - Search `TODO` in the whole project to see what you should configure or modify
+
+> [!IMPORTANT]
+> This template intentionally avoids guessing the Mini Cozy Room: Lo-Fi install directory, executable name, or `*_Data` directory. Update the generated local paths before relying on auto-deploy or local game references.
+> `MiniCozyRoomLoFiGameRootDir` is currently only a reserved root path for your own configuration and does not auto-derive `MiniCozyRoomLoFiManagedDir`.
 
 ### Thunderstore Packaging
 

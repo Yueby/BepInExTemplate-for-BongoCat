@@ -1,10 +1,24 @@
 <Project>
   <PropertyGroup>
-    <!-- Set if the default steam game install directory doesn't work. -->
-    <!-- <_GameNameNoSpaces_GameRootDir></_GameNameNoSpaces_GameRootDir> -->
+    <!--
+      Set this to your actual Mini Cozy Room: Lo-Fi game root directory.
+      Example only: C:\\Games\\Mini Cozy Room Lo-Fi\\
+    -->
+    <!-- <MiniCozyRoomLoFiGameRootDir></MiniCozyRoomLoFiGameRootDir> -->
 
-    <!-- Set if your BepInEx/ directory isn't in the game files. -->
-    <!-- <_GameNameNoSpaces_BepInExDir></_GameNameNoSpaces_BepInExDir> -->
+    <!--
+      Set this to your actual BepInEx plugins directory if you want build output copied automatically.
+      Example only: C:\\Games\\Mini Cozy Room Lo-Fi\\BepInEx\\plugins\\
+    -->
+    <!-- <MiniCozyRoomLoFiPluginsDir></MiniCozyRoomLoFiPluginsDir> -->
+
+    <!--
+      Required for local game assembly references: set this to the actual
+      managed assemblies directory used by your Mini Cozy Room: Lo-Fi install.
+      This is currently not derived automatically from
+      $(MiniCozyRoomLoFiGameRootDir).
+    -->
+    <!-- <MiniCozyRoomLoFiManagedDir></MiniCozyRoomLoFiManagedDir> -->
 
     <!-- Enable/disable deploying mod files to BepInEx directory. -->
     <DeployModFilesEnabled>true</DeployModFilesEnabled>

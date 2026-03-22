@@ -7,8 +7,8 @@ repository = "https://thunderstore.io"
 [package]
 namespace = "_ts-team_"
 name = "BepInExModTemplate"
-description = "TODO: Fill in short mod description."
-websiteUrl = "" # TODO: Add a link to your mod repository here (optional)
+description = "TODO: Fill in a short Mini Cozy Room: Lo-Fi mod description."
+websiteUrl = "" # TODO: Add a link to your Mini Cozy Room: Lo-Fi mod repository here (optional)
 containsNsfwContent = false
 
 [package.dependencies]
@@ -34,6 +34,7 @@ target = "/"
 # The following config options only apply when using TCLI to publish to Thunderstore directly:
 
 [publish]
+# Replace this placeholder after confirming the correct Thunderstore community slug.
 # See communities at:
 # https://thunderstore.io/api/experimental/community/
 communities = [ "_ThunderstoreGameIdentifier_", ]
