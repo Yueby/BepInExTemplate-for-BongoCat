@@ -1,6 +1,6 @@
 # BepInEx Template for BongoCat
 
-- [BepInEx Template for BongoCat](#bepinex-template-for-gamename)
+- [BepInEx Template for BongoCat](#bepinex-template-for-bongocat)
   - [Installing](#installing)
     - [From NuGet (Recommended)](#from-nuget-recommended)
     - [Manually](#manually)
@@ -12,8 +12,8 @@
 
 Template creator: After forking, replace the following, e.g.:
 
-- `BongoCat` → `Lethal Company` (name from Steam directory)
-- `BongoCat` → `LethalCompany` (name with spaces removed)
+- `BongoCat` → `Lethal Company` (`GameName`: display name / Steam directory name)
+- `BongoCat` → `LethalCompany` (`GameNameNoSpaces`: same name with spaces removed)
 - `bc` → `lc` (used for template `shortName`)
 - `BongoCatModding` → `LethalCompanyModding` (GitHub repo & NuGet package prefix)
 - `bongo-cat` → `lethal-company` (see: <https://thunderstore.io/api/experimental/community/>)
@@ -122,7 +122,9 @@ The `Directory.Build.*` files contain shared configuration for all projects in s
 
 At the root of your new project you should see `Config.Build.user.props.template` this is a special file that is the template for the project's user-specific config. Make a copy of this file and rename it `Config.Build.user.props` without the template part.
 
-This file will copy your assembly files to a plugins directory and it can be used to configure your paths to the game files and BepInEx plugins directory if the defaults don't work for you.
+By default this file enables deployment after a successful build, so copying it to `Config.Build.user.props` is enough to start copying your assembly files into the BepInEx plugins directory.
+
+It can also be used to configure your paths to the game files and BepInEx plugins directory if the defaults don't work for you.
 
 ### Thunderstore Packaging
 

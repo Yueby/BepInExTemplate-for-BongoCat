@@ -72,17 +72,17 @@
   <!-- Copy mod files defined in projects to the target BepInEx directory -->
   <Target Name="DeployFiles" AfterTargets="Build" Condition="'$(DeployModFilesEnabled)' == 'true'">
     <PropertyGroup>
-      <_TargetDir>$([MSBuild]::NormalizeDirectory($(_GameNameNoSpaces_BepInExDir)))</_TargetDir>
+      <_ResolvedBongoCatPluginsDir Condition="'$(BongoCatPluginsDir)' != ''">$([MSBuild]::NormalizeDirectory($(BongoCatPluginsDir)))</_ResolvedBongoCatPluginsDir>
     </PropertyGroup>
     <Message
       Text="Deploy → @(DeployModFiles -> '%(BepInExDir)%(FileName)%(Extension)')"
       Importance="High"
     />
     <Error
-      Text="BepInEx directory '$(_TargetDir)' doesn't exist! Configure _GameNameNoSpaces_BepInExDir to point to a valid path in the Config.Build.user.props file."
-      Condition="!Exists('$(_TargetDir)')"
+      Text="BepInEx plugins directory '$(_ResolvedBongoCatPluginsDir)' doesn't exist! Configure BongoCatPluginsDir or BongoCatGameRootDir in Config.Build.user.props to point to a valid path."
+      Condition="'$(_ResolvedBongoCatPluginsDir)' == '' Or !Exists('$(_ResolvedBongoCatPluginsDir)')"
     />
-    <Copy SourceFiles="@(DeployModFiles)" DestinationFolder="$(_TargetDir)%(BepInExDir)" />
+    <Copy SourceFiles="@(DeployModFiles)" DestinationFolder="$(_ResolvedBongoCatPluginsDir)%(BepInExDir)" />
   </Target>
 
   <!--
